@@ -23,6 +23,7 @@ contract OurTokenTest is Test{
 
     function testBobBalance() view public {
         assertEq(STARTING_BALANCE, ourToken.balanceOf(bob));
+        assertEq(0, ourToken.balanceOf(msg.sender));
     }
 
     function testAllowances() public {
